@@ -29,15 +29,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.izat.service_mask=0x0 \
     persist.gps.qc_nlp_in_use=0
 
-ifeq ($(TARGET_VOICE_TECH), cdma)
-    GPS_CONF := $(COMMON_PATH)/gps/etc/gps-cdma.conf
-else
-    GPS_CONF := $(COMMON_PATH)/gps/etc/gps.conf
-endif
-
 PRODUCT_COPY_FILES += \
-    $(GPS_CONF):/system/etc/gps.conf \
-    $(LOCAL_PATH)/gps/etc/sap.conf:/system/etc/sap.conf
+    $(COMMON_PATH)/gps/etc/gps.conf:/system/etc/gps.conf \
+    $(COMMON_PATH)/gps/etc/sap.conf:/system/etc/sap.conf
 
 # RIL
 PRODUCT_PROPERTY_OVERRIDES += \

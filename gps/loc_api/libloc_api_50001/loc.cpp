@@ -568,12 +568,7 @@ const void* loc_get_extension(const char* name)
    }
    else if (strcmp(name, AGPS_RIL_INTERFACE) == 0)
    {
-       char baseband[PROPERTY_VALUE_MAX];
-       property_get("ro.baseband", baseband, "msm");
-       if (strcmp(baseband, "csfb") == 0)
-       {
-           ret_val = &sLocEngAGpsRilInterface;
-       }
+   	ret_val = &sLocEngAGpsRilInterface;
    }
    else if (strcmp(name, GPS_GEOFENCING_INTERFACE) == 0)
    {
