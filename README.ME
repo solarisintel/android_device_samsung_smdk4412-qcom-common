@@ -1,0 +1,10 @@
+
+gps.h and gnss-base.h overwrite copy to hardware/libhardware/include/hardware/
+
+include/hardwareにあるgps.h とgnss-base.h は、
+hardware/libhardware/include/hardware/ に上書きコピーしてください。
+
+hardware/interfaces/gnss のソースがTARGET_SPECIFIC_HEADER_PATHを参照しないためです。
+
+
+
